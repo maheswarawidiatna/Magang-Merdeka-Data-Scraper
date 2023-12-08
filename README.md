@@ -21,7 +21,7 @@ pip install requests pandas
    - `limit`: Jumlah data yang diambil setiap kali panggil API (gua atur 100 karna emg mentok 100).
    - `offset`: Titik awal pengambilan data.
    - Parameter lainnya seperti `location_key`, `mitra_key`, `keyword`, `sector_id`, `sort_by`, dan `order` atur sesuai kebutuhan.
-3. Atur mau perusahaan mana aja yang mau di include ke file output excel di array `corp` untuk perusahaan korporat dan `bumn` untuk perusahaan BUMN. kalo mau tau apa aja perusahaan yang tersedia bisa run `print(set(all_data['mitra_name']))`
+3. Atur mau perusahaan mana aja yang mau di include ke file output excel di array `corp` untuk perusahaan korporat dan `bumn` untuk perusahaan BUMN.
 4. Run script.
 
 Script bakal terus manggil API dengan inkrementasi offset sebanyak value limit sampe ga ada lagi data yang dipull. Data yang berhasil diambil digabungin dan di proses baik per perusahaan dan summary keseluruhan pilihan perusahaan, di akhir proses pas semua data udah ke pull script bakal nyimpen data ke file Excel `corp_sum.xlsx` dan `bumn_sum.xlsx`dan langsung di auto unduh.
